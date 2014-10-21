@@ -1,0 +1,2121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B924951E-274A-4F80-843D-3E0E3FFCE070}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bingo</RootNamespace>
+    <AssemblyName>bingo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.50731.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.1.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CollectionPager, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CollectionPager.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Data.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxEditors.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxGridView.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxThemes.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxTreeList.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha, Version=2.0.3733.36001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UrlRewritingNet.UrlRewriter, Version=2.0.60829.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\UrlRewritingNet.UrlRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminCP\css\960.css" />
+    <Content Include="AdminCP\css\facebox.css" />
+    <Content Include="AdminCP\css\styles.css" />
+    <Content Include="AdminCP\css\TableDesign.css" />
+    <Content Include="AdminCP\Default.aspx" />
+    <Content Include="AdminCP\fancybox\blank.gif" />
+    <Content Include="AdminCP\fancybox\fancybox-x.png" />
+    <Content Include="AdminCP\fancybox\fancybox-y.png" />
+    <Content Include="AdminCP\fancybox\fancybox.png" />
+    <Content Include="AdminCP\fancybox\fancy_close.png" />
+    <Content Include="AdminCP\fancybox\fancy_loading.png" />
+    <Content Include="AdminCP\fancybox\fancy_nav_left.png" />
+    <Content Include="AdminCP\fancybox\fancy_nav_right.png" />
+    <Content Include="AdminCP\fancybox\fancy_shadow_e.png" />
+    <Content Include="AdminCP\fancybox\fancy_shadow_n.png" />
+    <Content Include="AdminCP\fancybox\fancy_shadow_ne.png" />
+    <Content Include="AdminCP\fancybox\fancy_shadow_nw.png" />
+    <Content Include="AdminCP\fancybox\fancy_shadow_s.png" />
+    <Content Include="AdminCP\fancybox\fancy_shadow_se.png" />
+    <Content Include="AdminCP\fancybox\fancy_shadow_sw.png" />
+    <Content Include="AdminCP\fancybox\fancy_shadow_w.png" />
+    <Content Include="AdminCP\fancybox\fancy_title_left.png" />
+    <Content Include="AdminCP\fancybox\fancy_title_main.png" />
+    <Content Include="AdminCP\fancybox\fancy_title_over.png" />
+    <Content Include="AdminCP\fancybox\fancy_title_right.png" />
+    <Content Include="AdminCP\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="AdminCP\fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="AdminCP\fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="AdminCP\fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="AdminCP\fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="AdminCP\images\access_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\access_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\access_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\access_16x16.gif" />
+    <Content Include="AdminCP\images\action_back.gif" />
+    <Content Include="AdminCP\images\action_forward.gif" />
+    <Content Include="AdminCP\images\action_go.gif" />
+    <Content Include="AdminCP\images\action_paste.gif" />
+    <Content Include="AdminCP\images\action_print.gif" />
+    <Content Include="AdminCP\images\action_refresh.gif" />
+    <Content Include="AdminCP\images\action_refresh_blue.gif" />
+    <Content Include="AdminCP\images\action_save.gif" />
+    <Content Include="AdminCP\images\action_stop.gif" />
+    <Content Include="AdminCP\images\add_16x16.gif" />
+    <Content Include="AdminCP\images\administrator1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\administrator1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\administrator1_16x16.gif" />
+    <Content Include="AdminCP\images\administrator2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\administrator2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\administrator2_16x16.gif" />
+    <Content Include="AdminCP\images\administrator3_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\administrator3_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\administrator3_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\administrator3_16x16.gif" />
+    <Content Include="AdminCP\images\anchor_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\anchor_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\anchor_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\anchor_16x16.gif" />
+    <Content Include="AdminCP\images\anonymous_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\anonymous_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\anonymous_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\anonymous_16x16.gif" />
+    <Content Include="AdminCP\images\application_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\application_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\application_16x16.gif" />
+    <Content Include="AdminCP\images\application_dreamweaver.gif" />
+    <Content Include="AdminCP\images\application_firefox.gif" />
+    <Content Include="AdminCP\images\application_flash.gif" />
+    <Content Include="AdminCP\images\arrow_down.gif" />
+    <Content Include="AdminCP\images\arrow_left.gif" />
+    <Content Include="AdminCP\images\arrow_right.gif" />
+    <Content Include="AdminCP\images\arrow_up.gif" />
+    <Content Include="AdminCP\images\attention1_16x16.gif" />
+    <Content Include="AdminCP\images\attention2_16x16.gif" />
+    <Content Include="AdminCP\images\attention3_16x16.gif" />
+    <Content Include="AdminCP\images\backup_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\backup_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\backup_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\backup_%28start%29_16x16.gif" />
+    <Content Include="AdminCP\images\backup_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\backup_16x16.gif" />
+    <Content Include="AdminCP\images\blockquote.gif" />
+    <Content Include="AdminCP\images\bold_16x16.gif" />
+    <Content Include="AdminCP\images\box.gif" />
+    <Content Include="AdminCP\images\business_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\business_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\business_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\business_16x16.gif" />
+    <Content Include="AdminCP\images\button.jpg" />
+    <Content Include="AdminCP\images\b_ongrey2.gif" />
+    <Content Include="AdminCP\images\b_onwhite.gif" />
+    <Content Include="AdminCP\images\calculate_16x16.gif" />
+    <Content Include="AdminCP\images\calendar.gif" />
+    <Content Include="AdminCP\images\cancel.png" />
+    <Content Include="AdminCP\images\check-in_16x16.gif" />
+    <Content Include="AdminCP\images\check-out_16x16.gif" />
+    <Content Include="AdminCP\images\color1_16x16.gif" />
+    <Content Include="AdminCP\images\color2_16x16.gif" />
+    <Content Include="AdminCP\images\color3_16x16.gif" />
+    <Content Include="AdminCP\images\comment.gif" />
+    <Content Include="AdminCP\images\comment1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment1_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment1_16x16.gif" />
+    <Content Include="AdminCP\images\comment2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment2_16x16.gif" />
+    <Content Include="AdminCP\images\comment3_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment3_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment3_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\comment3_16x16.gif" />
+    <Content Include="AdminCP\images\comment_blue.gif" />
+    <Content Include="AdminCP\images\comment_delete.gif" />
+    <Content Include="AdminCP\images\comment_new.gif" />
+    <Content Include="AdminCP\images\comment_yellow.gif" />
+    <Content Include="AdminCP\images\computer1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer1_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer1_%28start%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer1_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer1_16x16.gif" />
+    <Content Include="AdminCP\images\computer2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer2_%28start%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer2_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\computer2_16x16.gif" />
+    <Content Include="AdminCP\images\connect1_16x16.gif" />
+    <Content Include="AdminCP\images\connect2_16x16.gif" />
+    <Content Include="AdminCP\images\connect3_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\connect3_16x16.gif" />
+    <Content Include="AdminCP\images\contact_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\contact_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\contact_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\contact_16x16.gif" />
+    <Content Include="AdminCP\images\content.css" />
+    <Content Include="AdminCP\images\copy.gif" />
+    <Content Include="AdminCP\images\copy_16x16.gif" />
+    <Content Include="AdminCP\images\cut.gif" />
+    <Content Include="AdminCP\images\cut_16x16.gif" />
+    <Content Include="AdminCP\images\database_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_%28start%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_16x16.gif" />
+    <Content Include="AdminCP\images\database_export_16x16.gif" />
+    <Content Include="AdminCP\images\database_field_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_field_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_field_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_field_16x16.gif" />
+    <Content Include="AdminCP\images\database_form_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_form_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_form_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_form_16x16.gif" />
+    <Content Include="AdminCP\images\database_import_16x16.gif" />
+    <Content Include="AdminCP\images\database_table_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_table_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_table_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\database_table_16x16.gif" />
+    <Content Include="AdminCP\images\data_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\data_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\data_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\data_%28play%29_16x16.gif" />
+    <Content Include="AdminCP\images\data_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\data_16x16.gif" />
+    <Content Include="AdminCP\images\date.gif" />
+    <Content Include="AdminCP\images\date_16x16.gif" />
+    <Content Include="AdminCP\images\date_delete.gif" />
+    <Content Include="AdminCP\images\date_new.gif" />
+    <Content Include="AdminCP\images\deletebtn_16x16.gif" />
+    <Content Include="AdminCP\images\delete_16x16.gif" />
+    <Content Include="AdminCP\images\disconnect1_16x16.gif" />
+    <Content Include="AdminCP\images\disconnect2_16x16.gif" />
+    <Content Include="AdminCP\images\Down.png" />
+    <Content Include="AdminCP\images\down_16x16.gif" />
+    <Content Include="AdminCP\images\down_sort.gif" />
+    <Content Include="AdminCP\images\editbtn_16x16.gif" />
+    <Content Include="AdminCP\images\edit_16x16.gif" />
+    <Content Include="AdminCP\images\eject_16x16.gif" />
+    <Content Include="AdminCP\images\email_delete.png" />
+    <Content Include="AdminCP\images\email_edit.png" />
+    <Content Include="AdminCP\images\error_16x16.gif" />
+    <Content Include="AdminCP\images\fast_forward_16x16.gif" />
+    <Content Include="AdminCP\images\file_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\file_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\file_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\file_16x16.gif" />
+    <Content Include="AdminCP\images\file_acrobat.gif" />
+    <Content Include="AdminCP\images\file_font.gif" />
+    <Content Include="AdminCP\images\file_font_truetype.gif" />
+    <Content Include="AdminCP\images\file_manager_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\file_manager_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\file_manager_16x16.gif" />
+    <Content Include="AdminCP\images\filter_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\filter_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\filter_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\filter_16x16.gif" />
+    <Content Include="AdminCP\images\finances_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\finances_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\finances_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\finances_16x16.gif" />
+    <Content Include="AdminCP\images\first_16x16.gif" />
+    <Content Include="AdminCP\images\flag1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag1_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag1_16x16.gif" />
+    <Content Include="AdminCP\images\flag2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag2_16x16.gif" />
+    <Content Include="AdminCP\images\flag3_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag3_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag3_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag3_16x16.gif" />
+    <Content Include="AdminCP\images\flag4_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag4_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag4_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\flag4_16x16.gif" />
+    <Content Include="AdminCP\images\flag_blue.gif" />
+    <Content Include="AdminCP\images\flag_green.gif" />
+    <Content Include="AdminCP\images\flag_orange.gif" />
+    <Content Include="AdminCP\images\flag_red.gif" />
+    <Content Include="AdminCP\images\flag_white.gif" />
+    <Content Include="AdminCP\images\folder.gif" />
+    <Content Include="AdminCP\images\folder_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\folder_%28close%29_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\folder_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\folder_closed_16x16.gif" />
+    <Content Include="AdminCP\images\folder_delete.gif" />
+    <Content Include="AdminCP\images\folder_images.gif" />
+    <Content Include="AdminCP\images\folder_lock.gif" />
+    <Content Include="AdminCP\images\folder_new.gif" />
+    <Content Include="AdminCP\images\folder_open_16x16.gif" />
+    <Content Include="AdminCP\images\folder_page.gif" />
+    <Content Include="AdminCP\images\format1_16x16.gif" />
+    <Content Include="AdminCP\images\fromat2_16x16.gif" />
+    <Content Include="AdminCP\images\graph1_16x16.gif" />
+    <Content Include="AdminCP\images\graph2_16x16.gif" />
+    <Content Include="AdminCP\images\h2_trigger_a.gif" />
+    <Content Include="AdminCP\images\header.png" />
+    <Content Include="AdminCP\images\help_16x16.gif" />
+    <Content Include="AdminCP\images\home_16x16.gif" />
+    <Content Include="AdminCP\images\icondock\16x16\basket.png" />
+    <Content Include="AdminCP\images\icondock\16x16\bell.png" />
+    <Content Include="AdminCP\images\icondock\16x16\comment_add.png" />
+    <Content Include="AdminCP\images\icondock\16x16\date_add.png" />
+    <Content Include="AdminCP\images\icondock\16x16\newspaper_add.png" />
+    <Content Include="AdminCP\images\icondock\16x16\support.png" />
+    <Content Include="AdminCP\images\icondock\16x16\wishlist_add.png" />
+    <Content Include="AdminCP\images\icondock\accept.png" />
+    <Content Include="AdminCP\images\icondock\basket.png" />
+    <Content Include="AdminCP\images\icondock\bell.png" />
+    <Content Include="AdminCP\images\icondock\book_addresses.png" />
+    <Content Include="AdminCP\images\icondock\chart_bar.png" />
+    <Content Include="AdminCP\images\icondock\coins.png" />
+    <Content Include="AdminCP\images\icondock\comment.png" />
+    <Content Include="AdminCP\images\icondock\date.png" />
+    <Content Include="AdminCP\images\icondock\email.png" />
+    <Content Include="AdminCP\images\icondock\error.png" />
+    <Content Include="AdminCP\images\icondock\exclamation.png" />
+    <Content Include="AdminCP\images\icondock\information.png" />
+    <Content Include="AdminCP\images\icondock\lightbulb.png" />
+    <Content Include="AdminCP\images\icondock\user.png" />
+    <Content Include="AdminCP\images\icon_accept.gif" />
+    <Content Include="AdminCP\images\icon_airmail.gif" />
+    <Content Include="AdminCP\images\icon_alert.gif" />
+    <Content Include="AdminCP\images\icon_attachment.gif" />
+    <Content Include="AdminCP\images\icon_clock.gif" />
+    <Content Include="AdminCP\images\icon_component.gif" />
+    <Content Include="AdminCP\images\icon_download.gif" />
+    <Content Include="AdminCP\images\icon_email.gif" />
+    <Content Include="AdminCP\images\icon_extension.gif" />
+    <Content Include="AdminCP\images\icon_favourites.gif" />
+    <Content Include="AdminCP\images\icon_get_world.gif" />
+    <Content Include="AdminCP\images\icon_history.gif" />
+    <Content Include="AdminCP\images\icon_home.gif" />
+    <Content Include="AdminCP\images\icon_info.gif" />
+    <Content Include="AdminCP\images\icon_key.gif" />
+    <Content Include="AdminCP\images\icon_link.gif" />
+    <Content Include="AdminCP\images\icon_mail.gif" />
+    <Content Include="AdminCP\images\icon_monitor_mac.gif" />
+    <Content Include="AdminCP\images\icon_monitor_pc.gif" />
+    <Content Include="AdminCP\images\icon_network.gif" />
+    <Content Include="AdminCP\images\icon_package.gif" />
+    <Content Include="AdminCP\images\icon_package_get.gif" />
+    <Content Include="AdminCP\images\icon_package_open.gif" />
+    <Content Include="AdminCP\images\icon_padlock.gif" />
+    <Content Include="AdminCP\images\icon_security.gif" />
+    <Content Include="AdminCP\images\icon_settings.gif" />
+    <Content Include="AdminCP\images\icon_user.gif" />
+    <Content Include="AdminCP\images\icon_wand.gif" />
+    <Content Include="AdminCP\images\icon_world.gif" />
+    <Content Include="AdminCP\images\icon_world_dynamic.gif" />
+    <Content Include="AdminCP\images\image.gif" />
+    <Content Include="AdminCP\images\image_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\image_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\image_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\image_16x16.gif" />
+    <Content Include="AdminCP\images\image_new.gif" />
+    <Content Include="AdminCP\images\index_01.jpg" />
+    <Content Include="AdminCP\images\index_02.jpg" />
+    <Content Include="AdminCP\images\index_03.jpg" />
+    <Content Include="AdminCP\images\index_04.jpg" />
+    <Content Include="AdminCP\images\index_05.jpg" />
+    <Content Include="AdminCP\images\index_06.jpg" />
+    <Content Include="AdminCP\images\index_07.jpg" />
+    <Content Include="AdminCP\images\index_08.jpg" />
+    <Content Include="AdminCP\images\index_09.jpg" />
+    <Content Include="AdminCP\images\index_10.jpg" />
+    <Content Include="AdminCP\images\index_11.jpg" />
+    <Content Include="AdminCP\images\index_12.jpg" />
+    <Content Include="AdminCP\images\index_13.jpg" />
+    <Content Include="AdminCP\images\index_14.jpg" />
+    <Content Include="AdminCP\images\index_15.jpg" />
+    <Content Include="AdminCP\images\index_16.jpg" />
+    <Content Include="AdminCP\images\index_17.jpg" />
+    <Content Include="AdminCP\images\index_18.jpg" />
+    <Content Include="AdminCP\images\index_19.jpg" />
+    <Content Include="AdminCP\images\index_20.jpg" />
+    <Content Include="AdminCP\images\index_21.jpg" />
+    <Content Include="AdminCP\images\index_22.jpg" />
+    <Content Include="AdminCP\images\index_23.jpg" />
+    <Content Include="AdminCP\images\index_24.jpg" />
+    <Content Include="AdminCP\images\index_25.jpg" />
+    <Content Include="AdminCP\images\index_26.jpg" />
+    <Content Include="AdminCP\images\information_16x16.gif" />
+    <Content Include="AdminCP\images\interface_browser.gif" />
+    <Content Include="AdminCP\images\interface_dialog.gif" />
+    <Content Include="AdminCP\images\interface_installer.gif" />
+    <Content Include="AdminCP\images\italic_16x16.gif" />
+    <Content Include="AdminCP\images\jquery.wysiwyg.gif" />
+    <Content Include="AdminCP\images\label_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\label_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\label_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\label_16x16.gif" />
+    <Content Include="AdminCP\images\last_16x16.gif" />
+    <Content Include="AdminCP\images\law_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\law_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\law_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\law_16x16.gif" />
+    <Content Include="AdminCP\images\left_16x16.gif" />
+    <Content Include="AdminCP\images\level_down_16x16.gif" />
+    <Content Include="AdminCP\images\level_up_16x16.gif" />
+    <Content Include="AdminCP\images\link_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\link_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\link_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\link_16x16.gif" />
+    <Content Include="AdminCP\images\list_comments.gif" />
+    <Content Include="AdminCP\images\list_components.gif" />
+    <Content Include="AdminCP\images\list_errors.gif" />
+    <Content Include="AdminCP\images\list_extensions.gif" />
+    <Content Include="AdminCP\images\list_images.gif" />
+    <Content Include="AdminCP\images\list_keys.gif" />
+    <Content Include="AdminCP\images\list_links.gif" />
+    <Content Include="AdminCP\images\list_packages.gif" />
+    <Content Include="AdminCP\images\list_security.gif" />
+    <Content Include="AdminCP\images\list_settings.gif" />
+    <Content Include="AdminCP\images\list_users.gif" />
+    <Content Include="AdminCP\images\list_world.gif" />
+    <Content Include="AdminCP\images\lock_16x16.gif" />
+    <Content Include="AdminCP\images\logo-ses.gif" />
+    <Content Include="AdminCP\images\logo.png" />
+    <Content Include="AdminCP\images\magnifier.png" />
+    <Content Include="AdminCP\images\mail1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\mail1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\mail1_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\mail1_16x16.gif" />
+    <Content Include="AdminCP\images\mail2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\mail2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\mail2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\mail2_16x16.gif" />
+    <Content Include="AdminCP\images\measurement1_16x16.gif" />
+    <Content Include="AdminCP\images\measurement2_16x16.gif" />
+    <Content Include="AdminCP\images\medal_bronze_1.png" />
+    <Content Include="AdminCP\images\medal_gold_3.png" />
+    <Content Include="AdminCP\images\medal_silver_1.png" />
+    <Content Include="AdminCP\images\minus.gif" />
+    <Content Include="AdminCP\images\move_16x16.gif" />
+    <Content Include="AdminCP\images\music_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\music_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\music_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\music_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\music_16x16.gif" />
+    <Content Include="AdminCP\images\navigation.css" />
+    <Content Include="AdminCP\images\note.gif" />
+    <Content Include="AdminCP\images\notepad_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\notepad_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\notepad_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\notepad_16x16.gif" />
+    <Content Include="AdminCP\images\note_delete.gif" />
+    <Content Include="AdminCP\images\note_new.gif" />
+    <Content Include="AdminCP\images\ok_16x16.gif" />
+    <Content Include="AdminCP\images\ordered_list_16x16.gif" />
+    <Content Include="AdminCP\images\page.gif" />
+    <Content Include="AdminCP\images\page_alert.gif" />
+    <Content Include="AdminCP\images\page_attachment.gif" />
+    <Content Include="AdminCP\images\page_bookmark.gif" />
+    <Content Include="AdminCP\images\page_boy.gif" />
+    <Content Include="AdminCP\images\page_code.gif" />
+    <Content Include="AdminCP\images\page_colors.gif" />
+    <Content Include="AdminCP\images\page_component.gif" />
+    <Content Include="AdminCP\images\page_cross.gif" />
+    <Content Include="AdminCP\images\page_delete.gif" />
+    <Content Include="AdminCP\images\page_deny.gif" />
+    <Content Include="AdminCP\images\page_down.gif" />
+    <Content Include="AdminCP\images\page_dynamic.gif" />
+    <Content Include="AdminCP\images\page_edit.gif" />
+    <Content Include="AdminCP\images\page_extension.gif" />
+    <Content Include="AdminCP\images\page_favourites.gif" />
+    <Content Include="AdminCP\images\page_find.gif" />
+    <Content Include="AdminCP\images\page_flash.gif" />
+    <Content Include="AdminCP\images\page_girl.gif" />
+    <Content Include="AdminCP\images\page_html.gif" />
+    <Content Include="AdminCP\images\page_java.gif" />
+    <Content Include="AdminCP\images\page_key.gif" />
+    <Content Include="AdminCP\images\page_left.gif" />
+    <Content Include="AdminCP\images\page_link.gif" />
+    <Content Include="AdminCP\images\page_lock.gif" />
+    <Content Include="AdminCP\images\page_new.gif" />
+    <Content Include="AdminCP\images\page_next.gif" />
+    <Content Include="AdminCP\images\page_package.gif" />
+    <Content Include="AdminCP\images\page_php.gif" />
+    <Content Include="AdminCP\images\page_prev.gif" />
+    <Content Include="AdminCP\images\page_refresh.gif" />
+    <Content Include="AdminCP\images\page_right.gif" />
+    <Content Include="AdminCP\images\page_script.gif" />
+    <Content Include="AdminCP\images\page_security.gif" />
+    <Content Include="AdminCP\images\page_settings.gif" />
+    <Content Include="AdminCP\images\page_sound.gif" />
+    <Content Include="AdminCP\images\page_tag_blue.gif" />
+    <Content Include="AdminCP\images\page_tag_red.gif" />
+    <Content Include="AdminCP\images\page_text.gif" />
+    <Content Include="AdminCP\images\page_text_delete.gif" />
+    <Content Include="AdminCP\images\page_tick.gif" />
+    <Content Include="AdminCP\images\page_tree.gif" />
+    <Content Include="AdminCP\images\page_up.gif" />
+    <Content Include="AdminCP\images\page_url.gif" />
+    <Content Include="AdminCP\images\page_user.gif" />
+    <Content Include="AdminCP\images\page_user_dark.gif" />
+    <Content Include="AdminCP\images\page_user_light.gif" />
+    <Content Include="AdminCP\images\page_video.gif" />
+    <Content Include="AdminCP\images\page_wizard.gif" />
+    <Content Include="AdminCP\images\paste_16x16.gif" />
+    <Content Include="AdminCP\images\pause.gif" />
+    <Content Include="AdminCP\images\pay_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\pay_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\pay_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\pay_16x16.gif" />
+    <Content Include="AdminCP\images\phenotype.css" />
+    <Content Include="AdminCP\images\phenotype_ani_logo.gif" />
+    <Content Include="AdminCP\images\phenotype_typo.gif" />
+    <Content Include="AdminCP\images\photo_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\photo_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\photo_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\photo_16x16.gif" />
+    <Content Include="AdminCP\images\play_16x16.gif" />
+    <Content Include="AdminCP\images\plus.gif" />
+    <Content Include="AdminCP\images\preview_16x16.gif" />
+    <Content Include="AdminCP\images\print_16x16.gif" />
+    <Content Include="AdminCP\images\pt_cover.gif" />
+    <Content Include="AdminCP\images\pt_cover.jpg" />
+    <Content Include="AdminCP\images\readme.txt" />
+    <Content Include="AdminCP\images\record_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\record_%28copy%29_16x16.gif" />
+    <Content Include="AdminCP\images\record_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\record_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\record_16x16.gif" />
+    <Content Include="AdminCP\images\redo1_16x16.gif" />
+    <Content Include="AdminCP\images\redo2_16x16.gif" />
+    <Content Include="AdminCP\images\refresh_16x16.gif" />
+    <Content Include="AdminCP\images\registration1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\registration1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\registration1_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\registration1_16x16.gif" />
+    <Content Include="AdminCP\images\registration2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\registration2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\registration2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\registration2_16x16.gif" />
+    <Content Include="AdminCP\images\relationships_16x16.gif" />
+    <Content Include="AdminCP\images\report1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\report1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\report1_16x16.gif" />
+    <Content Include="AdminCP\images\report2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\report2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\report2_16x16.gif" />
+    <Content Include="AdminCP\images\report3_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\report3_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\report3_16x16.gif" />
+    <Content Include="AdminCP\images\research_16x16.gif" />
+    <Content Include="AdminCP\images\restore_16x16.gif" />
+    <Content Include="AdminCP\images\reverse_16x16.gif" />
+    <Content Include="AdminCP\images\right_16x16.gif" />
+    <Content Include="AdminCP\images\save_16x16.gif" />
+    <Content Include="AdminCP\images\script_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\script_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\script_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\script_%28start%29_16x16.gif" />
+    <Content Include="AdminCP\images\script_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\script_16x16.gif" />
+    <Content Include="AdminCP\images\search_16x16.gif" />
+    <Content Include="AdminCP\images\search_again_16x16.gif" />
+    <Content Include="AdminCP\images\security_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\security_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\security_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\security_16x16.gif" />
+    <Content Include="AdminCP\images\select_all_16x16.gif" />
+    <Content Include="AdminCP\images\server1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\server1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\server1_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\server1_%28start%29_16x16.gif" />
+    <Content Include="AdminCP\images\server1_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\server1_16x16.gif" />
+    <Content Include="AdminCP\images\server2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\server2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\server2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\server2_%28start%29_16x16.gif" />
+    <Content Include="AdminCP\images\server2_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\server2_16x16.gif" />
+    <Content Include="AdminCP\images\servers_16x16.gif" />
+    <Content Include="AdminCP\images\seslogo.png" />
+    <Content Include="AdminCP\images\settings1_16x16.gif" />
+    <Content Include="AdminCP\images\settings2_16x16.gif" />
+    <Content Include="AdminCP\images\shield.png" />
+    <Content Include="AdminCP\images\shopping_cart_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\shopping_cart_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\shopping_cart_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\shopping_cart_16x16.gif" />
+    <Content Include="AdminCP\images\sitemap_16x16.gif" />
+    <Content Include="AdminCP\images\skip_backward_16x16.gif" />
+    <Content Include="AdminCP\images\skip_forward_16x16.gif" />
+    <Content Include="AdminCP\images\sort_by_date_16x16.gif" />
+    <Content Include="AdminCP\images\sort_by_name_16x16.gif" />
+    <Content Include="AdminCP\images\sort_by_quantity_16x16.gif" />
+    <Content Include="AdminCP\images\sound_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\sound_%28play%29_16x16.gif" />
+    <Content Include="AdminCP\images\sound_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\sound_16x16.gif" />
+    <Content Include="AdminCP\images\spacer.gif" />
+    <Content Include="AdminCP\images\status_offline.png" />
+    <Content Include="AdminCP\images\status_online.png" />
+    <Content Include="AdminCP\images\stop_16x16.gif" />
+    <Content Include="AdminCP\images\strike_16x16.gif" />
+    <Content Include="AdminCP\images\support1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\support1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\support1_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\support1_16x16.gif" />
+    <Content Include="AdminCP\images\support2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\support2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\support2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\support2_16x16.gif" />
+    <Content Include="AdminCP\images\table.gif" />
+    <Content Include="AdminCP\images\tables.gif" />
+    <Content Include="AdminCP\images\table_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\table_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\table_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\table_16x16.gif" />
+    <Content Include="AdminCP\images\table_align_columns_16x16.gif" />
+    <Content Include="AdminCP\images\table_align_rows_16x16.gif" />
+    <Content Include="AdminCP\images\table_auto_format_16x16.gif" />
+    <Content Include="AdminCP\images\table_borders_16x16.gif" />
+    <Content Include="AdminCP\images\table_cell_alignment_16x16.gif" />
+    <Content Include="AdminCP\images\table_delete.gif" />
+    <Content Include="AdminCP\images\table_merge_cells_16x16.gif" />
+    <Content Include="AdminCP\images\table_split_cells_16x16.gif" />
+    <Content Include="AdminCP\images\text_align_center_16x16.gif" />
+    <Content Include="AdminCP\images\text_align_left_16x16.gif" />
+    <Content Include="AdminCP\images\text_align_right_16x16.gif" />
+    <Content Include="AdminCP\images\text_indent_16x16.gif" />
+    <Content Include="AdminCP\images\text_justify_16x16.gif" />
+    <Content Include="AdminCP\images\text_outdent_16x16.gif" />
+    <Content Include="AdminCP\images\thumb1.jpg" />
+    <Content Include="AdminCP\images\thumb1_big.jpg" />
+    <Content Include="AdminCP\images\thumb2.jpg" />
+    <Content Include="AdminCP\images\thumb2_big.jpg" />
+    <Content Include="AdminCP\images\thumb3.jpg" />
+    <Content Include="AdminCP\images\thumb3_big.jpg" />
+    <Content Include="AdminCP\images\thumb4.jpg" />
+    <Content Include="AdminCP\images\thumb4_big.jpg" />
+    <Content Include="AdminCP\images\thumb5.jpg" />
+    <Content Include="AdminCP\images\thumb5_big.jpg" />
+    <Content Include="AdminCP\images\thumb6.jpg" />
+    <Content Include="AdminCP\images\thumb6_big.jpg" />
+    <Content Include="AdminCP\images\thumb7.jpg" />
+    <Content Include="AdminCP\images\thumb7_big.jpg" />
+    <Content Include="AdminCP\images\thumb8.jpg" />
+    <Content Include="AdminCP\images\thumb8_big.jpg" />
+    <Content Include="AdminCP\images\tile_windows_horizontally_16x16.gif" />
+    <Content Include="AdminCP\images\tile_windows_vertically_16x16.gif" />
+    <Content Include="AdminCP\images\time_16x16.gif" />
+    <Content Include="AdminCP\images\tipsy.gif" />
+    <Content Include="AdminCP\images\trash_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\trash_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\trash_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\trash_16x16.gif" />
+    <Content Include="AdminCP\images\turn-off_16x16.gif" />
+    <Content Include="AdminCP\images\turn-on_16x16.gif" />
+    <Content Include="AdminCP\images\underline_16x16.gif" />
+    <Content Include="AdminCP\images\undo1_16x16.gif" />
+    <Content Include="AdminCP\images\undo2_16x16.gif" />
+    <Content Include="AdminCP\images\unlock_16x16.gif" />
+    <Content Include="AdminCP\images\unordered_list_16x16.gif" />
+    <Content Include="AdminCP\images\Up.png" />
+    <Content Include="AdminCP\images\up_16x16.gif" />
+    <Content Include="AdminCP\images\up_sort.gif" />
+    <Content Include="AdminCP\images\user1_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user1_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user1_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user1_16x16.gif" />
+    <Content Include="AdminCP\images\user2_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user2_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user2_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user2_16x16.gif" />
+    <Content Include="AdminCP\images\user3_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user3_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user3_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user3_16x16.gif" />
+    <Content Include="AdminCP\images\user4_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user4_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user4_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user4_16x16.gif" />
+    <Content Include="AdminCP\images\user5_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user5_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user5_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user5_16x16.gif" />
+    <Content Include="AdminCP\images\user6_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user6_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user6_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user6_16x16.gif" />
+    <Content Include="AdminCP\images\user7_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user7_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user7_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user7_16x16.gif" />
+    <Content Include="AdminCP\images\user8_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user8_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user8_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user8_16x16.gif" />
+    <Content Include="AdminCP\images\user9_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\user9_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\user9_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\user9_16x16.gif" />
+    <Content Include="AdminCP\images\video_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\video_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\video_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\video_%28play%29_16x16.gif" />
+    <Content Include="AdminCP\images\video_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\video_16x16.gif" />
+    <Content Include="AdminCP\images\view_16x16.gif" />
+    <Content Include="AdminCP\images\wait_16x16.gif" />
+    <Content Include="AdminCP\images\web-server_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\web-server_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\web-server_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\web-server_%28start%29_16x16.gif" />
+    <Content Include="AdminCP\images\web-server_%28stop%29_16x16.gif" />
+    <Content Include="AdminCP\images\web-server_16x16.gif" />
+    <Content Include="AdminCP\images\web_%28add%29_16x16.gif" />
+    <Content Include="AdminCP\images\web_%28delete%29_16x16.gif" />
+    <Content Include="AdminCP\images\web_%28edit%29_16x16.gif" />
+    <Content Include="AdminCP\images\web_16x16.gif" />
+    <Content Include="AdminCP\images\white_border.gif" />
+    <Content Include="AdminCP\images\win_sh_bo_le.gif" />
+    <Content Include="AdminCP\images\win_sh_bo_mi.gif" />
+    <Content Include="AdminCP\images\win_sh_bo_ri.gif" />
+    <Content Include="AdminCP\images\win_sh_ri_mi.gif" />
+    <Content Include="AdminCP\images\win_sh_ri_to.gif" />
+    <Content Include="AdminCP\images\wizard_16x16.gif" />
+    <Content Include="AdminCP\images\zoom_16x16.gif" />
+    <Content Include="AdminCP\images\zoom_in_16x16.gif" />
+    <Content Include="AdminCP\images\zoom_out_16x16.gif" />
+    <Content Include="AdminCP\js\facebox.js" />
+    <Content Include="AdminCP\js\graphs.js" />
+    <Content Include="AdminCP\js\jquery.flot.pack.js" />
+    <Content Include="AdminCP\js\jquery.tipsy.js" />
+    <Content Include="AdminCP\js\jquery.validate.js" />
+    <Content Include="AdminCP\js\scripts.js" />
+    <Content Include="AdminCP\ListCategory.aspx" />
+    <Content Include="AdminCP\Login.aspx" />
+    <Content Include="AdminCP\MenuUC\ucAlbum.ascx" />
+    <Content Include="AdminCP\MenuUC\ucArticle.ascx" />
+    <Content Include="AdminCP\MenuUC\ucDanhMuc.ascx" />
+    <Content Include="AdminCP\MenuUC\ucHeThong.ascx" />
+    <Content Include="AdminCP\PageUC\ucAddMultiImg.ascx" />
+    <Content Include="AdminCP\PageUC\ucAlbum.ascx" />
+    <Content Include="AdminCP\PageUC\ucAlbumDetail.ascx" />
+    <Content Include="AdminCP\PageUC\ucArticle.ascx" />
+    <Content Include="AdminCP\PageUC\ucArticleCategory.ascx" />
+    <Content Include="AdminCP\PageUC\ucClientLogin.ascx" />
+    <Content Include="AdminCP\PageUC\ucConfig.ascx" />
+    <Content Include="AdminCP\PageUC\ucDeThi.ascx" />
+    <Content Include="AdminCP\PageUC\ucListAlbum.ascx" />
+    <Content Include="AdminCP\PageUC\ucListArticle.ascx" />
+    <Content Include="AdminCP\PageUC\ucListArticleCategory.ascx" />
+    <Content Include="AdminCP\PageUC\ucListClientLogin.ascx" />
+    <Content Include="AdminCP\PageUC\ucListConfig.ascx" />
+    <Content Include="AdminCP\PageUC\ucListImage.ascx" />
+    <Content Include="AdminCP\PageUC\ucListSlide.ascx" />
+    <Content Include="AdminCP\PageUC\ucListUser.ascx" />
+    <Content Include="AdminCP\PageUC\ucListVideo.ascx" />
+    <Content Include="AdminCP\PageUC\ucSlide.ascx" />
+    <Content Include="AdminCP\PageUC\ucTaiLieuHocTap.ascx" />
+    <Content Include="AdminCP\PageUC\ucUser.ascx" />
+    <Content Include="AdminCP\stylex.css" />
+    <Content Include="Album-Image.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\bingo.dll" />
+    <Content Include="bin\bingo.pdb" />
+    <Content Include="bin\CKEditor.NET.dll" />
+    <Content Include="bin\CollectionPager.dll" />
+    <Content Include="bin\DevExpress.Data.v9.2.dll" />
+    <Content Include="bin\DevExpress.Data.v9.2.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxEditors.v9.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxEditors.v9.2.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxGridView.v9.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxGridView.v9.2.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxThemes.v9.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxTreeList.v9.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxTreeList.v9.2.xml" />
+    <Content Include="bin\DevExpress.Web.v9.2.dll" />
+    <Content Include="bin\DevExpress.Web.v9.2.xml" />
+    <Content Include="bin\MSCaptcha.dll" />
+    <Content Include="bin\UrlRewritingNet.UrlRewriter.dll" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\ckeditor_basic.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\images\spacer.gif" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\lang\_languages.js" />
+    <Content Include="ckeditor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\xml\plugin.js" />
+    <Content Include="ckeditor\skins\kama\dialog.css" />
+    <Content Include="ckeditor\skins\kama\editor.css" />
+    <Content Include="ckeditor\skins\kama\icons.png" />
+    <Content Include="ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\kama\skin.js" />
+    <Content Include="ckeditor\skins\kama\templates.css" />
+    <Content Include="ckeditor\skins\office2003\dialog.css" />
+    <Content Include="ckeditor\skins\office2003\editor.css" />
+    <Content Include="ckeditor\skins\office2003\icons.png" />
+    <Content Include="ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\office2003\skin.js" />
+    <Content Include="ckeditor\skins\office2003\templates.css" />
+    <Content Include="ckeditor\skins\v2\dialog.css" />
+    <Content Include="ckeditor\skins\v2\editor.css" />
+    <Content Include="ckeditor\skins\v2\icons.png" />
+    <Content Include="ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\v2\skin.js" />
+    <Content Include="ckeditor\skins\v2\templates.css" />
+    <Content Include="ckeditor\themes\default\theme.js" />
+    <Content Include="Content.aspx" />
+    <Content Include="Css\preview.css" />
+    <Content Include="Css\Style.css" />
+    <Content Include="Css\wt-rotator.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="DeThi.aspx" />
+    <Content Include="fancybox\blank.gif" />
+    <Content Include="fancybox\fancybox-x.png" />
+    <Content Include="fancybox\fancybox-y.png" />
+    <Content Include="fancybox\fancybox.png" />
+    <Content Include="fancybox\fancy_close.png" />
+    <Content Include="fancybox\fancy_loading.png" />
+    <Content Include="fancybox\fancy_nav_left.png" />
+    <Content Include="fancybox\fancy_nav_right.png" />
+    <Content Include="fancybox\fancy_shadow_e.png" />
+    <Content Include="fancybox\fancy_shadow_n.png" />
+    <Content Include="fancybox\fancy_shadow_ne.png" />
+    <Content Include="fancybox\fancy_shadow_nw.png" />
+    <Content Include="fancybox\fancy_shadow_s.png" />
+    <Content Include="fancybox\fancy_shadow_se.png" />
+    <Content Include="fancybox\fancy_shadow_sw.png" />
+    <Content Include="fancybox\fancy_shadow_w.png" />
+    <Content Include="fancybox\fancy_title_left.png" />
+    <Content Include="fancybox\fancy_title_main.png" />
+    <Content Include="fancybox\fancy_title_over.png" />
+    <Content Include="fancybox\fancy_title_right.png" />
+    <Content Include="fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="HinhAnh.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\A.jpg" />
+    <Content Include="images\anhnho.jpg" />
+    <Content Include="images\anhto.jpg" />
+    <Content Include="images\bando1.png" />
+    <Content Include="images\bannercontent.jpg" />
+    <Content Include="images\Cap-right.jpg" />
+    <Content Include="images\cap-right.png" />
+    <Content Include="images\giaotiep.jpg" />
+    <Content Include="images\Ielts.jpg" />
+    <Content Include="images\list-bg.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\nextpage.png" />
+    <Content Include="images\onthidaihoc.jpg" />
+    <Content Include="images\PrevPage.png" />
+    <Content Include="images\slide.jpg" />
+    <Content Include="images\Slogan.png" />
+    <Content Include="images\title-bg.png" />
+    <Content Include="images\toeic.png" />
+    <Content Include="js\allinone_bannerRotator.js" />
+    <Content Include="js\flexi-background.js" />
+    <Content Include="js\hideshow.js" />
+    <Content Include="js\jquery-1.9.0.min.js" />
+    <Content Include="js\jquery-ui-1.8.2.custom.min.js" />
+    <Content Include="js\jquery.ba-throttle-debounce.min.js" />
+    <Content Include="js\jquery.carouFredSel-6.1.0-packed.js" />
+    <Content Include="js\jquery.carouFredSel-6.1.0.js" />
+    <Content Include="js\jquery.equalHeight.js" />
+    <Content Include="js\jquery.mousewheel.min.js" />
+    <Content Include="js\jquery.reveal.js" />
+    <Content Include="js\jquery.tablesorter.min.js" />
+    <Content Include="js\jquery.touchSwipe.min.js" />
+    <Content Include="js\jquery.ui.touch-punch.min.js" />
+    <Content Include="js\jquery.wt-rotator.min.js" />
+    <Content Include="js\jquery1.4.2.js" />
+    <Content Include="js\login.js" />
+    <Content Include="js\popup.js" />
+    <Content Include="js\preview.js" />
+    <Content Include="LienHe.aspx" />
+    <Content Include="LopKhaiGiang.aspx" />
+    <Content Include="LopSapKhaiGiangCate.aspx" />
+    <Content Include="Media\1-22032013013311.jpg" />
+    <Content Include="Media\2-22032013013311.jpg" />
+    <Content Include="Media\3-22032013013311.png" />
+    <Content Include="Media\4-22032013013311.jpg" />
+    <Content Include="Media\5-22032013013311.png" />
+    <Content Include="Media\abc-22032013013430.jpg" />
+    <Content Include="Media\abc-22032013013620.jpg" />
+    <Content Include="Media\abc-22032013051708.jpg" />
+    <Content Include="Media\abc-22032013051734.jpg" />
+    <Content Include="Media\Giao-Tiep---Phong-Van-22032013092052.jpg" />
+    <Content Include="Media\Khoa-hoc-A-Co-Ban-22032013090432.jpg" />
+    <Content Include="Media\Khoa-Hoc-Ielts-22032013092004.jpg" />
+    <Content Include="Media\Khoa-Hoc-Toeic-22032013091945.png" />
+    <Content Include="Media\On-Thi-Dai-Hoc-Khoi-D-22032013092107.jpg" />
+    <Content Include="Media\Test-22032013013241.jpg" />
+    <Content Include="Media\Tin-Tuc-22032013041413.jpg" />
+    <Content Include="Module\MenuLeft2.ascx" />
+    <Content Include="Module\ucArticle.ascx" />
+    <Content Include="Module\ucDiaChi.ascx" />
+    <Content Include="Module\ucHomeAlbum.ascx" />
+    <Content Include="Module\ucHomeVideo.ascx" />
+    <Content Include="Module\ucLopSapKhaiGiang.ascx" />
+    <Content Include="Module\ucMenu.ascx" />
+    <Content Include="Module\ucMenuFoot.ascx" />
+    <Content Include="Module\ucMenuLeft.ascx" />
+    <Content Include="Module\ucNoti.ascx" />
+    <Content Include="Module\ucSlide.ascx" />
+    <Content Include="Category.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="TaiLieu.aspx" />
+    <Content Include="ThongBao.aspx" />
+    <Content Include="NoiDung.aspx" />
+    <Content Include="tintuc.aspx" />
+    <Content Include="Video.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminCP\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\Functions.cs" />
+    <Compile Include="AdminCP\ListCategory.aspx.cs">
+      <DependentUpon>ListCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\ListCategory.aspx.designer.cs">
+      <DependentUpon>ListCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\MenuUC\ucAlbum.ascx.cs">
+      <DependentUpon>ucAlbum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\MenuUC\ucAlbum.ascx.designer.cs">
+      <DependentUpon>ucAlbum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\MenuUC\ucArticle.ascx.cs">
+      <DependentUpon>ucArticle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\MenuUC\ucArticle.ascx.designer.cs">
+      <DependentUpon>ucArticle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\MenuUC\ucDanhMuc.ascx.cs">
+      <DependentUpon>ucDanhMuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\MenuUC\ucDanhMuc.ascx.designer.cs">
+      <DependentUpon>ucDanhMuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\MenuUC\ucHeThong.ascx.cs">
+      <DependentUpon>ucHeThong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\MenuUC\ucHeThong.ascx.designer.cs">
+      <DependentUpon>ucHeThong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucAddMultiImg.ascx.cs">
+      <DependentUpon>ucAddMultiImg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucAddMultiImg.ascx.designer.cs">
+      <DependentUpon>ucAddMultiImg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucAlbum.ascx.cs">
+      <DependentUpon>ucAlbum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucAlbum.ascx.designer.cs">
+      <DependentUpon>ucAlbum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucAlbumDetail.ascx.cs">
+      <DependentUpon>ucAlbumDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucAlbumDetail.ascx.designer.cs">
+      <DependentUpon>ucAlbumDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucArticle.ascx.cs">
+      <DependentUpon>ucArticle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucArticle.ascx.designer.cs">
+      <DependentUpon>ucArticle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucArticleCategory.ascx.cs">
+      <DependentUpon>ucArticleCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucArticleCategory.ascx.designer.cs">
+      <DependentUpon>ucArticleCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucClientLogin.ascx.cs">
+      <DependentUpon>ucClientLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucClientLogin.ascx.designer.cs">
+      <DependentUpon>ucClientLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucConfig.ascx.cs">
+      <DependentUpon>ucConfig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucConfig.ascx.designer.cs">
+      <DependentUpon>ucConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucDeThi.ascx.cs">
+      <DependentUpon>ucDeThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucDeThi.ascx.designer.cs">
+      <DependentUpon>ucDeThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListAlbum.ascx.cs">
+      <DependentUpon>ucListAlbum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListAlbum.ascx.designer.cs">
+      <DependentUpon>ucListAlbum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListArticle.ascx.cs">
+      <DependentUpon>ucListArticle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListArticle.ascx.designer.cs">
+      <DependentUpon>ucListArticle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListArticleCategory.ascx.cs">
+      <DependentUpon>ucListArticleCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListArticleCategory.ascx.designer.cs">
+      <DependentUpon>ucListArticleCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListClientLogin.ascx.cs">
+      <DependentUpon>ucListClientLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListClientLogin.ascx.designer.cs">
+      <DependentUpon>ucListClientLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListConfig.ascx.cs">
+      <DependentUpon>ucListConfig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListConfig.ascx.designer.cs">
+      <DependentUpon>ucListConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListImage.ascx.cs">
+      <DependentUpon>ucListImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListImage.ascx.designer.cs">
+      <DependentUpon>ucListImage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListSlide.ascx.cs">
+      <DependentUpon>ucListSlide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListSlide.ascx.designer.cs">
+      <DependentUpon>ucListSlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListUser.ascx.cs">
+      <DependentUpon>ucListUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListUser.ascx.designer.cs">
+      <DependentUpon>ucListUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListVideo.ascx.cs">
+      <DependentUpon>ucListVideo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucListVideo.ascx.designer.cs">
+      <DependentUpon>ucListVideo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucSlide.ascx.cs">
+      <DependentUpon>ucSlide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucSlide.ascx.designer.cs">
+      <DependentUpon>ucSlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucTaiLieuHocTap.ascx.cs">
+      <DependentUpon>ucTaiLieuHocTap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucTaiLieuHocTap.ascx.designer.cs">
+      <DependentUpon>ucTaiLieuHocTap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucUser.ascx.cs">
+      <DependentUpon>ucUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCP\PageUC\ucUser.ascx.designer.cs">
+      <DependentUpon>ucUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Album-Image.aspx.cs">
+      <DependentUpon>Album-Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Album-Image.aspx.designer.cs">
+      <DependentUpon>Album-Image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClass\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseClass\LocalizationExpressionBuilder.cs" />
+    <Compile Include="BaseClass\NumberToStringVN.cs" />
+    <Compile Include="BaseClass\RandomPassword.cs" />
+    <Compile Include="BaseClass\Sendmail.cs" />
+    <Compile Include="BaseClass\ShoppingCart.cs" />
+    <Compile Include="BaseClass\Ultility.cs" />
+    <Compile Include="bingo.Master.cs">
+      <DependentUpon>bingo.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bingo.Master.designer.cs">
+      <DependentUpon>bingo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Content.aspx.cs">
+      <DependentUpon>Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content.aspx.designer.cs">
+      <DependentUpon>Content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeThi.aspx.cs">
+      <DependentUpon>DeThi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeThi.aspx.designer.cs">
+      <DependentUpon>DeThi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="HinhAnh.aspx.cs">
+      <DependentUpon>HinhAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HinhAnh.aspx.designer.cs">
+      <DependentUpon>HinhAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LienHe.aspx.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LienHe.aspx.designer.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LopKhaiGiang.aspx.cs">
+      <DependentUpon>LopKhaiGiang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LopKhaiGiang.aspx.designer.cs">
+      <DependentUpon>LopKhaiGiang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LopSapKhaiGiangCate.aspx.cs">
+      <DependentUpon>LopSapKhaiGiangCate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LopSapKhaiGiangCate.aspx.designer.cs">
+      <DependentUpon>LopSapKhaiGiangCate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\MenuLeft2.ascx.cs">
+      <DependentUpon>MenuLeft2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\MenuLeft2.ascx.designer.cs">
+      <DependentUpon>MenuLeft2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucArticle.ascx.cs">
+      <DependentUpon>ucArticle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucArticle.ascx.designer.cs">
+      <DependentUpon>ucArticle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucDiaChi.ascx.cs">
+      <DependentUpon>ucDiaChi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucDiaChi.ascx.designer.cs">
+      <DependentUpon>ucDiaChi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucHomeAlbum.ascx.cs">
+      <DependentUpon>ucHomeAlbum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucHomeAlbum.ascx.designer.cs">
+      <DependentUpon>ucHomeAlbum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucHomeVideo.ascx.cs">
+      <DependentUpon>ucHomeVideo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucHomeVideo.ascx.designer.cs">
+      <DependentUpon>ucHomeVideo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucLopSapKhaiGiang.ascx.cs">
+      <DependentUpon>ucLopSapKhaiGiang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucLopSapKhaiGiang.ascx.designer.cs">
+      <DependentUpon>ucLopSapKhaiGiang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucMenu.ascx.cs">
+      <DependentUpon>ucMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucMenu.ascx.designer.cs">
+      <DependentUpon>ucMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucMenuFoot.ascx.cs">
+      <DependentUpon>ucMenuFoot.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucMenuFoot.ascx.designer.cs">
+      <DependentUpon>ucMenuFoot.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucMenuLeft.ascx.cs">
+      <DependentUpon>ucMenuLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucMenuLeft.ascx.designer.cs">
+      <DependentUpon>ucMenuLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucNoti.ascx.cs">
+      <DependentUpon>ucNoti.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucNoti.ascx.designer.cs">
+      <DependentUpon>ucNoti.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ucSlide.ascx.cs">
+      <DependentUpon>ucSlide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ucSlide.ascx.designer.cs">
+      <DependentUpon>ucSlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaiLieu.aspx.cs">
+      <DependentUpon>TaiLieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaiLieu.aspx.designer.cs">
+      <DependentUpon>TaiLieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongBao.aspx.cs">
+      <DependentUpon>ThongBao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongBao.aspx.designer.cs">
+      <DependentUpon>ThongBao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoiDung.aspx.cs">
+      <DependentUpon>NoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoiDung.aspx.designer.cs">
+      <DependentUpon>NoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tintuc.aspx.cs">
+      <DependentUpon>tintuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tintuc.aspx.designer.cs">
+      <DependentUpon>tintuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Video.aspx.cs">
+      <DependentUpon>Video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video.aspx.designer.cs">
+      <DependentUpon>Video.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ckeditor\adapters\.svn\prop-base\" />
+    <Folder Include="ckeditor\adapters\.svn\props\" />
+    <Folder Include="ckeditor\adapters\.svn\text-base\" />
+    <Folder Include="ckeditor\adapters\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\adapters\.svn\tmp\props\" />
+    <Folder Include="ckeditor\adapters\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\images\.svn\props\" />
+    <Folder Include="ckeditor\images\.svn\text-base\" />
+    <Folder Include="ckeditor\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\lang\.svn\prop-base\" />
+    <Folder Include="ckeditor\lang\.svn\props\" />
+    <Folder Include="ckeditor\lang\.svn\text-base\" />
+    <Folder Include="ckeditor\lang\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\lang\.svn\tmp\props\" />
+    <Folder Include="ckeditor\lang\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\.svn\props\" />
+    <Folder Include="ckeditor\plugins\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\.svn\props\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\lang\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\lang\.svn\props\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\lang\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\lang\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\lang\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\a11yhelp\lang\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\about\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\about\.svn\props\" />
+    <Folder Include="ckeditor\plugins\about\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\about\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\about\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\about\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\about\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\about\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\about\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\about\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\about\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\about\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\adobeair\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\adobeair\.svn\props\" />
+    <Folder Include="ckeditor\plugins\adobeair\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\adobeair\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\adobeair\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\adobeair\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\ajax\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\ajax\.svn\props\" />
+    <Folder Include="ckeditor\plugins\ajax\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\ajax\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\ajax\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\ajax\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\autogrow\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\autogrow\.svn\props\" />
+    <Folder Include="ckeditor\plugins\autogrow\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\autogrow\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\autogrow\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\autogrow\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\bbcode\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\bbcode\.svn\props\" />
+    <Folder Include="ckeditor\plugins\bbcode\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\bbcode\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\bbcode\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\bbcode\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\clipboard\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\clipboard\.svn\props\" />
+    <Folder Include="ckeditor\plugins\clipboard\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\clipboard\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\clipboard\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\clipboard\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\clipboard\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\clipboard\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\clipboard\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\clipboard\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\clipboard\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\clipboard\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\colordialog\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\colordialog\.svn\props\" />
+    <Folder Include="ckeditor\plugins\colordialog\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\colordialog\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\colordialog\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\colordialog\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\colordialog\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\colordialog\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\colordialog\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\colordialog\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\colordialog\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\colordialog\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\devtools\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\devtools\.svn\props\" />
+    <Folder Include="ckeditor\plugins\devtools\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\devtools\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\devtools\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\devtools\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\devtools\lang\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\devtools\lang\.svn\props\" />
+    <Folder Include="ckeditor\plugins\devtools\lang\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\devtools\lang\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\devtools\lang\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\devtools\lang\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\dialog\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\dialog\.svn\props\" />
+    <Folder Include="ckeditor\plugins\dialog\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\dialog\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\dialog\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\dialog\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\div\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\div\.svn\props\" />
+    <Folder Include="ckeditor\plugins\div\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\div\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\div\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\div\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\div\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\div\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\div\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\div\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\div\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\div\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\docprops\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\docprops\.svn\props\" />
+    <Folder Include="ckeditor\plugins\docprops\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\docprops\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\docprops\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\docprops\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\docprops\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\docprops\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\docprops\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\docprops\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\docprops\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\docprops\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\find\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\find\.svn\props\" />
+    <Folder Include="ckeditor\plugins\find\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\find\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\find\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\find\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\find\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\find\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\find\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\find\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\find\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\find\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\flash\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\flash\.svn\props\" />
+    <Folder Include="ckeditor\plugins\flash\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\flash\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\flash\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\flash\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\flash\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\flash\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\flash\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\flash\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\flash\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\flash\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\flash\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\flash\images\.svn\props\" />
+    <Folder Include="ckeditor\plugins\flash\images\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\flash\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\flash\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\flash\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\forms\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\forms\.svn\props\" />
+    <Folder Include="ckeditor\plugins\forms\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\forms\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\forms\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\forms\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\forms\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\forms\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\forms\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\forms\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\forms\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\forms\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\forms\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\forms\images\.svn\props\" />
+    <Folder Include="ckeditor\plugins\forms\images\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\forms\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\forms\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\forms\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\iframedialog\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\iframedialog\.svn\props\" />
+    <Folder Include="ckeditor\plugins\iframedialog\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\iframedialog\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\iframedialog\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\iframedialog\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\iframe\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\iframe\.svn\props\" />
+    <Folder Include="ckeditor\plugins\iframe\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\iframe\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\iframe\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\iframe\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\iframe\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\iframe\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\iframe\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\iframe\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\iframe\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\iframe\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\iframe\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\iframe\images\.svn\props\" />
+    <Folder Include="ckeditor\plugins\iframe\images\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\iframe\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\iframe\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\iframe\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\image\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\image\.svn\props\" />
+    <Folder Include="ckeditor\plugins\image\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\image\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\image\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\image\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\image\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\image\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\image\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\image\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\image\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\image\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\link\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\link\.svn\props\" />
+    <Folder Include="ckeditor\plugins\link\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\link\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\link\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\link\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\link\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\link\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\link\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\link\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\link\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\link\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\link\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\link\images\.svn\props\" />
+    <Folder Include="ckeditor\plugins\link\images\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\link\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\link\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\link\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\liststyle\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\liststyle\.svn\props\" />
+    <Folder Include="ckeditor\plugins\liststyle\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\liststyle\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\liststyle\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\liststyle\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\liststyle\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\liststyle\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\liststyle\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\liststyle\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\liststyle\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\liststyle\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\pagebreak\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\pagebreak\.svn\props\" />
+    <Folder Include="ckeditor\plugins\pagebreak\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\pagebreak\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\pagebreak\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\pagebreak\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\pagebreak\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\pagebreak\images\.svn\props\" />
+    <Folder Include="ckeditor\plugins\pagebreak\images\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\pagebreak\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\pagebreak\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\pagebreak\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\pastefromword\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\pastefromword\.svn\props\" />
+    <Folder Include="ckeditor\plugins\pastefromword\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\pastefromword\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\pastefromword\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\pastefromword\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\pastefromword\filter\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\pastefromword\filter\.svn\props\" />
+    <Folder Include="ckeditor\plugins\pastefromword\filter\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\pastefromword\filter\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\pastefromword\filter\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\pastefromword\filter\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\pastetext\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\pastetext\.svn\props\" />
+    <Folder Include="ckeditor\plugins\pastetext\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\pastetext\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\pastetext\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\pastetext\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\pastetext\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\pastetext\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\pastetext\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\pastetext\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\pastetext\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\pastetext\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\.svn\props\" />
+    <Folder Include="ckeditor\plugins\placeholder\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\placeholder\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\placeholder\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\placeholder\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\lang\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\lang\.svn\props\" />
+    <Folder Include="ckeditor\plugins\placeholder\lang\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\lang\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\placeholder\lang\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\placeholder\lang\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\scayt\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\scayt\.svn\props\" />
+    <Folder Include="ckeditor\plugins\scayt\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\scayt\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\scayt\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\scayt\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\scayt\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\scayt\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\scayt\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\scayt\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\scayt\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\scayt\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\showblocks\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\showblocks\.svn\props\" />
+    <Folder Include="ckeditor\plugins\showblocks\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\showblocks\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\showblocks\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\showblocks\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\showblocks\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\showblocks\images\.svn\props\" />
+    <Folder Include="ckeditor\plugins\showblocks\images\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\showblocks\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\showblocks\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\showblocks\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\smiley\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\smiley\.svn\props\" />
+    <Folder Include="ckeditor\plugins\smiley\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\smiley\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\smiley\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\smiley\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\smiley\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\smiley\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\smiley\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\smiley\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\smiley\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\smiley\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\smiley\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\smiley\images\.svn\props\" />
+    <Folder Include="ckeditor\plugins\smiley\images\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\smiley\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\smiley\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\smiley\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\.svn\props\" />
+    <Folder Include="ckeditor\plugins\specialchar\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\specialchar\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\specialchar\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\specialchar\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\lang\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\lang\.svn\props\" />
+    <Folder Include="ckeditor\plugins\specialchar\lang\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\lang\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\specialchar\lang\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\specialchar\lang\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\stylesheetparser\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\stylesheetparser\.svn\props\" />
+    <Folder Include="ckeditor\plugins\stylesheetparser\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\stylesheetparser\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\stylesheetparser\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\stylesheetparser\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\styles\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\styles\.svn\props\" />
+    <Folder Include="ckeditor\plugins\styles\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\styles\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\styles\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\styles\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\styles\styles\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\styles\styles\.svn\props\" />
+    <Folder Include="ckeditor\plugins\styles\styles\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\styles\styles\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\styles\styles\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\styles\styles\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\tableresize\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\tableresize\.svn\props\" />
+    <Folder Include="ckeditor\plugins\tableresize\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\tableresize\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\tableresize\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\tableresize\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\tabletools\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\tabletools\.svn\props\" />
+    <Folder Include="ckeditor\plugins\tabletools\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\tabletools\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\tabletools\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\tabletools\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\tabletools\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\tabletools\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\tabletools\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\tabletools\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\tabletools\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\tabletools\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\table\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\table\.svn\props\" />
+    <Folder Include="ckeditor\plugins\table\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\table\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\table\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\table\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\table\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\table\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\table\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\table\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\table\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\table\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\templates\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\templates\.svn\props\" />
+    <Folder Include="ckeditor\plugins\templates\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\templates\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\templates\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\templates\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\templates\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\templates\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\templates\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\templates\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\templates\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\templates\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\templates\templates\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\templates\templates\.svn\props\" />
+    <Folder Include="ckeditor\plugins\templates\templates\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\templates\templates\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\templates\templates\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\templates\templates\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\templates\templates\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\templates\templates\images\.svn\props\" />
+    <Folder Include="ckeditor\plugins\templates\templates\images\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\templates\templates\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\templates\templates\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\templates\templates\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\.svn\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\lang\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\lang\.svn\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\lang\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\lang\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\lang\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\lang\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\.svn\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\assets\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\assets\.svn\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\assets\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\assets\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\assets\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\uicolor\yui\assets\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\wsc\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\wsc\.svn\props\" />
+    <Folder Include="ckeditor\plugins\wsc\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\wsc\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\wsc\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\wsc\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\wsc\dialogs\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\wsc\dialogs\.svn\props\" />
+    <Folder Include="ckeditor\plugins\wsc\dialogs\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\wsc\dialogs\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\wsc\dialogs\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\wsc\dialogs\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\plugins\xml\.svn\prop-base\" />
+    <Folder Include="ckeditor\plugins\xml\.svn\props\" />
+    <Folder Include="ckeditor\plugins\xml\.svn\text-base\" />
+    <Folder Include="ckeditor\plugins\xml\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\plugins\xml\.svn\tmp\props\" />
+    <Folder Include="ckeditor\plugins\xml\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\skins\.svn\prop-base\" />
+    <Folder Include="ckeditor\skins\.svn\props\" />
+    <Folder Include="ckeditor\skins\.svn\text-base\" />
+    <Folder Include="ckeditor\skins\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\skins\.svn\tmp\props\" />
+    <Folder Include="ckeditor\skins\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\skins\kama\.svn\prop-base\" />
+    <Folder Include="ckeditor\skins\kama\.svn\props\" />
+    <Folder Include="ckeditor\skins\kama\.svn\text-base\" />
+    <Folder Include="ckeditor\skins\kama\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\skins\kama\.svn\tmp\props\" />
+    <Folder Include="ckeditor\skins\kama\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\skins\kama\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\skins\kama\images\.svn\props\" />
+    <Folder Include="ckeditor\skins\kama\images\.svn\text-base\" />
+    <Folder Include="ckeditor\skins\kama\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\skins\kama\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\skins\kama\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\skins\office2003\.svn\prop-base\" />
+    <Folder Include="ckeditor\skins\office2003\.svn\props\" />
+    <Folder Include="ckeditor\skins\office2003\.svn\text-base\" />
+    <Folder Include="ckeditor\skins\office2003\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\skins\office2003\.svn\tmp\props\" />
+    <Folder Include="ckeditor\skins\office2003\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\skins\office2003\images\.svn\prop-base\" />
+    <Folder Include="ckeditor\skins\office2003\images\.svn\props\" />
+    <Folder Include="ckeditor\skins\office2003\images\.svn\text-base\" />
+    <Folder Include="ckeditor\skins\office2003\images\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\skins\office2003\images\.svn\tmp\props\" />
+    <Folder Include="ckeditor\skins\office2003\images\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\skins\v2\.svn\prop-base\" />
+    <Folder Include="ckeditor\skins\v2\.svn\props\" />
+    <Folder Include="ckeditor\skins\v2\.svn\text-base\" />
+    <Folder Include="ckeditor\skins\v2\.svn\tmp\prop-base\" />
+    <Folder Include="ckeditor\skins\v2\.svn\tmp\props\" />
+    <Folder Include="ckeditor\skins\v2\.svn\tmp\text-base\" />
+    <Folder Include="ckeditor\skins\v2\images\.svn\" />
+    <Folder Include="fancybox\.svn\prop-base\" />
+    <Folder Include="fancybox\.svn\props\" />
+    <Folder Include="fancybox\.svn\text-base\" />
+    <Folder Include="fancybox\.svn\tmp\prop-base\" />
+    <Folder Include="fancybox\.svn\tmp\props\" />
+    <Folder Include="fancybox\.svn\tmp\text-base\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdminCP\images\icondock\Thumbs.db" />
+    <None Include="AdminCP\images\Thumbs.db" />
+    <Content Include="bingo.Master" />
+    <None Include="bin\UrlRewritingNet.UrlRewriter.dll.refresh" />
+    <None Include="ckeditor\.htaccess" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bingo.BL\bingo.BL.csproj">
+      <Project>{5FD37790-2AF0-411C-8482-6C57C7E403C7}</Project>
+      <Name>bingo.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bingo.DO\bingo.DO.csproj">
+      <Project>{2FCC2DC2-F337-4CA6-AEC8-BE574DA136E9}</Project>
+      <Name>bingo.DO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>20172</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,5 @@
+BEC-MI.VN                 vtc123456        http://domain.fptdata.vn
+BEC-MI.COM.VN             vtc123456        http://domain.fptdata.vn
+BEC-MI.COM		  meomeo	   http://dns.vtcdata.vn/
+quangnm			  meomeo	   https://112.72.98.186:8443/
+minhquang		.....			SQL	
